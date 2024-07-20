@@ -1,0 +1,257 @@
+ /*  font-family: "Roboto", sans-serif; */
+
+ /* Normalizacion */
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    list-style: none;
+    text-decoration: none;
+    color: white;
+ }
+
+ body {
+    background-color: black;
+    /* TODO: */
+ }
+
+ header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background-color: transparent;
+ }
+
+ .logo {
+    font-size: 30px;
+    font-weight: 600;
+ }
+
+ .nav {
+    display: flex;
+ }
+
+ .nav a {
+    margin-left: 18px;
+    padding: 2px 2px;
+    border-bottom: 2px solid transparent;
+    transition: all .2s ease-in;
+    border-radius: 2px;
+ }
+
+ .nav a:hover {
+    border-bottom: 2px solid white;
+ }
+
+ #menu-icon {
+    display: none;
+ }
+
+ #menu-toggle {
+    display: none;
+ }
+
+ #menu-icon {
+    color: white;
+    cursor: pointer;
+    z-index: 101;
+    font-size: 30px;
+ }
+
+ .menu-icon-action {
+    display: none;
+ }
+
+ .hero {
+   height: 100%;
+   width: 100%;
+   min-height: 100vh;
+   background: linear-gradient(245.59deg, #31494e 0%, #358e70 25%, #131313 70%);
+   position: relative;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   gap: 2rem;
+ }
+
+ section {
+   padding: 0 8%;
+ }
+
+ .hero-text h5 {
+   font-size: 20px;
+   font-weight: 500;
+   margin-bottom: 30px;
+ }
+
+ .hero-text h4 {
+   font-size: 22px;
+ }
+
+ .hero-text h1 {
+   font-size: 60px;
+   font-weight: 500;
+   margin-bottom: 32px;
+ }
+
+ .hero-text p {
+   font-size: 90%;
+   line-height: 1.8;
+ }
+
+ .hero-img img {
+   width: 600px;
+   border-radius: 150px;
+   margin: 10% 0 0 10%;
+   height: auto;
+   transition: all 3s linear;
+ }
+
+ .hero-img img:hover {
+   width: 650px;
+   opacity: 0.6;
+ }
+
+ .hero-text a {
+   display: inline-block;
+   background-color: #31494e;
+   border: 1px solid transparent;
+   padding: 15px;
+   line-height: 1.2;
+   font-size: 16px;
+   font-weight: 500;
+   margin-top: 10px;
+   border-radius: 10px;
+   transition: all 0.3s ease;
+ }
+
+ .hero-text a:hover {
+   background-color: transparent;
+   border: 1px solid white;
+   transform: translateX(10px);
+ }
+
+ .more-information {
+   margin-left: 20px;
+ }
+
+.icons {
+   position: absolute;
+   top: 50vh;
+   padding: 0 3%;
+   transform: translateY(-50%);
+}
+
+.icons i {
+   display: flex;
+   margin: 26px 0 ;
+   font-size: 35px;
+   transition: all 0.5s ease;
+}
+
+.icons i:hover {
+   color: aqua;
+   transform: translateX(-5px);
+}
+
+.scroll-down {
+   position: absolute;
+   bottom: 6%;
+   right: 3%;
+}
+
+.scroll-down {
+   display: block;
+   padding: 26px;
+   font-size: 22px;
+   background-color: #131313a2;
+   border-radius: 30px;
+   transition: all 0.5s ease;
+}
+
+.scroll-down:hover {
+   transform: translateY(-5px);
+}
+
+@media (max-width:1400px) {
+   section {
+      padding: 0 3%;
+      transition: 0.2s;
+   }
+
+   .icons {
+      display: none;
+   }
+
+   .hero-img img {
+      width: 500px;
+   }
+
+   .hero-img {
+      text-align: center;
+   }
+
+   .hero-text {
+      padding: 0;
+   }
+
+   .more-information {
+      margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+   .menu-icon-action {
+      display: block;
+   }
+
+   #menu-icon {
+      display: block;
+   }
+
+   .hero-text {
+      text-align: center;
+   }
+
+   .hero {
+      height: 100%;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+   }
+
+   .nav {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      height: 180px;
+      width: 200px;
+      background-color: #31494ed7;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 10px;
+   }
+
+   .nav a {
+      margin-left: 0;
+      display: block;
+      margin: 7px 0;
+   }
+
+   .scroll-down {
+      display: none;
+   }
+
+   #menu-toggle:checked + label.menu-icon-action + ul {
+      right: 0;
+   }
+}
