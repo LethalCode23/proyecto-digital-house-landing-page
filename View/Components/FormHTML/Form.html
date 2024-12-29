@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Form.css">
+    <title>Validacion de formulario</title>
+</head>
+<body>
+
+    <div id="registerForm">
+
+        <h2>Formulario de Registro</h2>
+        <form id="formRegis" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" minlength="3" required autocomplete="off">
+            <div id="errorName" class="error"></div>
+            <br>
+
+            <label for="lastName">LastName</label>
+            <input type="text" id="lastName" name="lastName" minlength="3" required autocomplete="off">
+            <div id="errorLastName" class="error"></div>
+            <br>
+
+            <label for="idCard">ID Card</label>
+            <input type="text" id="idCard" name="idCard" minlength="6" required autocomplete="off">
+            <div id="errorIdCard" class="error"></div>
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="off">
+            <div id="errorEmail" class="error"></div>
+            <br>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+            <div id="errorAge" class="error"></div>
+            <br>
+
+            <label for="activity">Activity</label>
+            <select name="activity" id="activity" required>
+                <option value="">Select...</option>
+                <option value="Technology">Technology</option>
+                <option value="Programming">Programming</option>
+                <option value="AI">AI</option>
+                <option value="Automation">Automation</option>
+                <option value="Systems">Systems</option>
+            </select>
+            <div id="errorActivity" class="error"></div>
+            <br>
+
+            <label for="levelStudy">Level Study</label>
+            <select name="levelStudy" id="levelStudy">
+                <option value="">Select...</option>
+                <option value="Primary">Primary</option>
+                <option value="Secundary">Secundary</option>
+                <option value="University">University</option>
+                <option value="Postgraduate">Postgraduate</option>
+            </select>
+            <div id="errorLevelStudy" class="error"></div>
+            <br>
+
+            <label class="inline">
+                <input type="checkbox" name="agreeTerms" id="agreeTerms" required>
+                I agree to the terms
+            </label>
+            <div id="errorAgreeTerms" class="error"></div>
+            <br>
+
+            <label class="inline">Marketing</label>
+            <input type="checkbox" name="marketing" id="offers" value="offers">
+            <label for="offers" class="inline">Offers</label>
+            <input type="checkbox" name="advertising" id="news" value="news">
+            <label for="news" class="inline">News</label>            
+            <div class="error" id="errorMarketing"></div>
+            <br>
+
+            <input type="submit" value="SaveForm">
+        </form>
+    </div>
+
+    <script src="Form.js"></script>
+</body>
+</html>
